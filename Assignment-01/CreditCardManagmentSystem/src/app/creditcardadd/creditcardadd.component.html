@@ -1,0 +1,124 @@
+<h2>Add Card</h2>
+<form [formGroup]="cardForm" (ngSubmit)="onSubmit()">
+  <!-- Card Number -->
+  <div class="form-group">
+    <label for="cardNumber">Card Number</label>
+    <input
+      type="text"
+      class="form-control"
+      id="cardNumber"
+      formControlName="cardNumber"
+      required
+    />
+    <div
+      *ngIf="cardForm.get('cardNumber').hasError('required')"
+      class="error-message"
+    >
+      Card Number is required.
+    </div>
+    <div
+      *ngIf="cardForm.get('cardNumber').hasError('pattern')"
+      class="error-message"
+    >
+      Card Number must contain only digits.
+    </div>
+    <div
+      *ngIf="cardForm.get('cardNumber').hasError('length')"
+      class="error-message"
+    >
+      Card Number must be between 7-16 digits.
+    </div>
+  </div>
+
+  <!-- Cardholder Name -->
+  <div class="form-group">
+    <label for="cardholderName">Cardholder Name</label>
+    <input
+      type="text"
+      class="form-control"
+      id="cardholderName"
+      formControlName="cardholderName"
+      required
+    />
+    <div
+      *ngIf="cardForm.get('cardholderName').hasError('required')"
+      class="error-message"
+    >
+      Cardholder Name is required.
+    </div>
+  </div>
+
+  <!-- CSC Code -->
+  <div class="form-group">
+    <label for="cscCode">CSC Code</label>
+    <input
+      type="text"
+      class="form-control"
+      id="cscCode"
+      formControlName="cscCode"
+      required
+    />
+    <div
+      *ngIf="cardForm.get('cscCode').hasError('required')"
+      class="error-message"
+    >
+      CSC Code is required.
+    </div>
+    <div
+      *ngIf="cardForm.get('cscCode').hasError('pattern')"
+      class="error-message"
+    >
+      CSC Code must contain only digits.
+    </div>
+    <div
+      *ngIf="cardForm.get('cscCode').hasError('length')"
+      class="error-message"
+    >
+      CSC Code must be exactly 3 digits.
+    </div>
+  </div>
+
+  <!-- Expiration Date Month -->
+  <div class="form-group">
+    <label for="expirationDateMonth">Expiration Date (Month)</label>
+    <input
+      type="text"
+      class="form-control"
+      id="expirationDateMonth"
+      formControlName="expirationDateMonth"
+      required
+    />
+    <div
+      *ngIf="cardForm.get('expirationDateMonth').hasError('required')"
+      class="error-message"
+    >
+      Expiration Date (Month) is required.
+    </div>
+    <div
+      *ngIf="cardForm.get('expirationDateMonth').hasError('min') || cardForm.get('expirationDateMonth').hasError('max')"
+      class="error-message"
+    >
+      Expiration Date (Month) must be between 1-12.
+    </div>
+  </div>
+
+  <!-- Expiration Date Year -->
+  <div class="form-group">
+    <label for="expirationDateYear">Expiration Date (Year)</label>
+    <input
+      type="text"
+      class="form-control"
+      id="expirationDateYear"
+      formControlName="expirationDateYear"
+      required
+    />
+    <div
+      *ngIf="cardForm.get('expirationDateYear').hasError('required')"
+      class="error-message"
+    >
+      Expiration Date (Year) is required.
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

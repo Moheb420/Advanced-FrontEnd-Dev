@@ -1,0 +1,24 @@
+<h2>Transaction List</h2>
+
+<table class="transaction-table">
+  <thead>
+    <tr>
+      <th>Transaction ID</th>
+      <th>Card Number</th>
+      <th>Amount</th>
+      <th>Comment</th>
+      <th>Date</th>
+      <th>Currency</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let transaction of transactions">
+      <td>{{ transaction.uid }}</td>
+      <td>{{ transaction.credit_card.card_number }}</td>
+      <td>{{ transaction.amount }}</td>
+      <td>{{ transaction.comment }}</td>
+      <td>{{ transaction.date | date: 'medium' }}</td>
+      <td>{{ transaction.currency }}</td>
+    </tr>
+  </tbody>
+</table>

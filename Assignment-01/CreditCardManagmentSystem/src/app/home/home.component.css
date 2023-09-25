@@ -1,0 +1,58 @@
+home.component.css
+
+.card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+  }
+  
+  /* Assuming this is your component's CSS file (e.g., home.component.css) */
+
+/* Style the entire table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #4CAF50; /* Green background color */
+    color: rgb(6, 28, 16); /* White text color */
+    border: 1px solid #4CAF50; /* Green border */
+    margin-bottom: 20px; /* Add some margin to separate it from other content */
+  }
+  
+  /* Style the table header */
+  th {
+    background-color: #45a049; /* Darker green for headers */
+    color: rgb(20, 18, 40);
+    text-align: left;
+    padding: 12px;
+  }
+  
+  /* Style the table rows */
+  tr {
+    background-color: #96d6a7; /* Light gray for rows */
+  }
+  
+  /* Style alternating rows with a slightly different background color */
+  tr:nth-child(even) {
+    background-color: #508666;
+  }
+  
+  /* Style table cells */
+  td {
+    padding: 8px;
+  }
+  
+  /* Style the link within the table cell */
+  td a {
+    color: rgb(17, 86, 58);
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  /* Change link color when hovered */
+  td a:hover {
+    color: #45a049; /* Darker green on hover */
+  }
+  

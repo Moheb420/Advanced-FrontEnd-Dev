@@ -1,0 +1,16 @@
+<table>
+  <thead>
+    <tr>
+      <th>Card Number</th>
+      <th>Card Holdername</th>
+      <th>Issuer</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let card of creditCards">
+      <td><a [routerLink]="['/creditcarddetailsscreen', card.card_number]">{{ card.card_number }}</a></td>
+      <td>{{ card.cardholder_name }}</td>
+      <td>{{ card.issuer }}</td>
+    </tr>
+  </tbody>
+</table>

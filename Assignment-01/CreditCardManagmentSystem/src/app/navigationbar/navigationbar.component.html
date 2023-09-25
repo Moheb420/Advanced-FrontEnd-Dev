@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation bar</title>
+    <style>
+        /* Basic styling for the navigation bar */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #143822; /* Change to your desired background color */
+        }
+
+        .navbar {
+            background-color: #0b5514;
+            overflow: hidden;
+            text-align: right; /* Align links to the right */
+        }
+
+        .navbar a {
+            display: inline-block; /* Display links horizontally */
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation bar -->
+    <div class="navbar">
+              <a routerLink="/">Home</a>
+              <a routerLink="/add-card">Add Credit Card</a>
+              <a routerLink="/transactions">transactions</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+/* Define a class for the table */
+.green-table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 600px; /* Adjust the maximum width as needed */
+  margin: 0 auto; /* Center the table horizontally */
+  background-color: #4CAF50; /* Green background color */
+}
+
+/* Style the table header */
+.green-table th {
+  background-color: #9aab9b; /* Darker green for header */
+  color: white;
+  text-align: left;
+  padding: 8px;
+}
+
+/* Style the table rows */
+.green-table tr:nth-child(even) {
+  background-color: #4d8b59; /* Alternate row color */
+}
+
+.green-table tr:nth-child(odd) {
+  background-color: #4a6b57; /* White background for odd rows */
+}
+
+/* Style the table data cells */
+.green-table td {
+  border: 1px solid #7cc89c;
+  padding: 8px;
+}
+
+/* Hover effect on table rows */
+.green-table tr:hover {
+  background-color: #ddd; /* Light gray background on hover */
+}
+
+/* Apply styles from the first code block here */
+
+/* Additional styles */
+h1 {
+  font-size: 30px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+.tbl-header {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.tbl-content {
+  height: 300px;
+  overflow-x: auto;
+  margin-top: 0px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+th {
+  padding: 20px 15px;
+  text-align: left;
+  font-weight: 500;
+  font-size: 12px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+td {
+  padding: 15px;
+  text-align: left;
+  vertical-align: middle;
+  font-weight: 300;
+  font-size: 12px;
+  color: #fff;
+  border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+}
+
+/* Other styles from the first code block */
+
+/* ... (existing styles) ... */
