@@ -1,5 +1,5 @@
-<h2>Add Card</h2>
-<form [formGroup]="cardForm" (ngSubmit)="onSubmit()">
+<h1>Add Card</h1>
+<form [formGroup]="cardForm" (ngSubmit)="onSubmit()" class="green-form">
   <!-- Card Number -->
   <div class="form-group">
     <label for="cardNumber">Card Number</label>
@@ -11,19 +11,19 @@
       required
     />
     <div
-      *ngIf="cardForm.get('cardNumber').hasError('required')"
+      *ngIf="cardForm.get('cardNumber')?.hasError('required')"
       class="error-message"
     >
       Card Number is required.
     </div>
     <div
-      *ngIf="cardForm.get('cardNumber').hasError('pattern')"
+      *ngIf="cardForm.get('cardNumber')?.hasError('pattern')"
       class="error-message"
     >
       Card Number must contain only digits.
     </div>
     <div
-      *ngIf="cardForm.get('cardNumber').hasError('length')"
+      *ngIf="cardForm.get('cardNumber')?.hasError('length')"
       class="error-message"
     >
       Card Number must be between 7-16 digits.
@@ -41,7 +41,7 @@
       required
     />
     <div
-      *ngIf="cardForm.get('cardholderName').hasError('required')"
+      *ngIf="cardForm.get('cardholderName')?.hasError('required')"
       class="error-message"
     >
       Cardholder Name is required.
@@ -59,19 +59,19 @@
       required
     />
     <div
-      *ngIf="cardForm.get('cscCode').hasError('required')"
+      *ngIf="cardForm.get('cscCode')?.hasError('required')"
       class="error-message"
     >
       CSC Code is required.
     </div>
     <div
-      *ngIf="cardForm.get('cscCode').hasError('pattern')"
+      *ngIf="cardForm.get('cscCode')?.hasError('pattern')"
       class="error-message"
     >
       CSC Code must contain only digits.
     </div>
     <div
-      *ngIf="cardForm.get('cscCode').hasError('length')"
+      *ngIf="cardForm.get('cscCode')?.hasError('length')"
       class="error-message"
     >
       CSC Code must be exactly 3 digits.
@@ -89,13 +89,13 @@
       required
     />
     <div
-      *ngIf="cardForm.get('expirationDateMonth').hasError('required')"
+      *ngIf="cardForm.get('expirationDateMonth')?.hasError('required')"
       class="error-message"
     >
       Expiration Date (Month) is required.
     </div>
     <div
-      *ngIf="cardForm.get('expirationDateMonth').hasError('min') || cardForm.get('expirationDateMonth').hasError('max')"
+      *ngIf="cardForm.get('expirationDateMonth')?.hasError('min') || cardForm.get('expirationDateMonth')?.hasError('max')"
       class="error-message"
     >
       Expiration Date (Month) must be between 1-12.
@@ -113,7 +113,7 @@
       required
     />
     <div
-      *ngIf="cardForm.get('expirationDateYear').hasError('required')"
+      *ngIf="cardForm.get('expirationDateYear')?.hasError('required')"
       class="error-message"
     >
       Expiration Date (Year) is required.

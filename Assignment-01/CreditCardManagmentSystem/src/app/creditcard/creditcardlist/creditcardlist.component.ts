@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Creditcardlist } from '../../creditcardlist.model';
 import { Router } from '@angular/router'
-import { CardDataService } from 'src/app/carddata.service';
-import { Creditcard } from '../../creditcard.model'; // Import from the new file
+import { CreditcardserviceService } from 'src/app/creditcardservice.service';
+
 
 @Component({
   selector: 'app-creditcardlist',
@@ -15,7 +15,7 @@ export class CreditcardlistComponent implements OnInit {
   
 
   constructor(
-    private cardDataService: CardDataService, 
+    private creditcardserviceService: CreditcardserviceService, 
     private router: Router
   ) {}
 
@@ -29,7 +29,7 @@ export class CreditcardlistComponent implements OnInit {
   }
 
   getCreditCards() {
-    this.cardDataService.getCreditCards().subscribe((cards: Creditcardlist[]) => {
+    this.creditcardserviceService.getCreditCards().subscribe((cards: Creditcardlist[]) => {
       this.creditCards = cards;
       
     });

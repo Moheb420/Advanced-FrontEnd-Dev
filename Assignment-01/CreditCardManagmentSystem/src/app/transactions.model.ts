@@ -1,3 +1,5 @@
+import { Validators } from '@angular/forms';
+
 export interface Transaction {
     uid: string;
     credit_card: {
@@ -14,3 +16,4 @@ export interface Transaction {
     currency: string;
   }
   
+

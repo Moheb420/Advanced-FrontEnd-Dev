@@ -11,7 +11,10 @@ import { CreditcardlistComponent } from '../app/creditcard/creditcardlist/credit
 import { CreditcarddetailsscreenComponent } from './creditcarddetailsscreen/creditcarddetailsscreen.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { CreditcardaddComponent } from './creditcardadd/creditcardadd.component';
+import { CreditcardaddComponent } from './creditcard/creditcardadd/creditcardadd.component';
+import { CreditcardModule } from './creditcard/creditcard.module';
+import { TransactionlistComponent } from './transactionlist/transactionlist.component';
+import { TransactionModule } from './transaction/transaction.module';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,9 @@ import { CreditcardaddComponent } from './creditcardadd/creditcardadd.component'
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    CommonModule
+    CommonModule,
+    CreditcardModule,
+    TransactionModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

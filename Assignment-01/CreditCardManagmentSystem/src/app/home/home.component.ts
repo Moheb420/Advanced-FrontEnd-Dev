@@ -1,7 +1,5 @@
 // home.component.ts
-import { Component, OnInit } from '@angular/core';
-import { CardDataService } from '../carddata.service';
-import { Creditcard } from '../creditcard.model'; // Import from the new file
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-home',

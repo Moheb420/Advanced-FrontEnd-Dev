@@ -1,12 +1,18 @@
-<h2>Transaction List</h2>
+<h2>Transactions</h2>
 
+<div class="header-section">
+  <div class="filter-section">
+    <label for="cardNumberFilter">Filter by Card Number:</label>
+    <input type="number" id="cardNumberFilter" [(ngModel)]="cardNumberFilter" (ngModelChange)="filterTransactions()" />
+  </div>
+  <button routerLink="/transactionadd" class="add-transaction-button">Add Transaction</button>
+</div>
 <table class="transaction-table">
   <thead>
     <tr>
       <th>Transaction ID</th>
       <th>Card Number</th>
       <th>Amount</th>
-      <th>Comment</th>
       <th>Date</th>
       <th>Currency</th>
     </tr>
@@ -16,7 +22,6 @@
       <td>{{ transaction.uid }}</td>
       <td>{{ transaction.credit_card.card_number }}</td>
       <td>{{ transaction.amount }}</td>
-      <td>{{ transaction.comment }}</td>
       <td>{{ transaction.date | date: 'medium' }}</td>
       <td>{{ transaction.currency }}</td>
     </tr>

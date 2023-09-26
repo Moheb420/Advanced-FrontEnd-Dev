@@ -5,12 +5,13 @@
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
+    color: #9fb3a0;
   }
   
   /* Style table headers */
   .transaction-table th {
-    background-color: #f2f2f2;
-    color: #333;
+    background-color: #2c5e2e;
+    color: #dfeadf;
     text-align: left;
     padding: 10px;
   }
@@ -25,4 +26,48 @@
   .transaction-table tr:hover {
     background-color: #f5f5f5;
   }
+ 
   
+  .transaction-table {
+    width: 100%;
+    table-layout: fixed;
+  }
+
+  
+h2{
+  text-align: center;
+  color: #9fc8a6;
+}
+
+/* Add this to your component's CSS file */
+.header-section {
+  display: flex; /* Display elements in a row */
+  align-items: center; /* Center vertically */
+  justify-content: space-between; /* Space between elements */
+}
+
+.filter-section {
+  flex: 1; /* Expand to take available space */
+  margin-right: 10px; /* Add margin between elements */
+}
+
+.add-transaction-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 40px;
+  margin-right: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-transaction-button:hover {
+  background-color: #45a049; 
+}
+
+label{
+  margin-left: 20px;
+  color: #45a049;
+  font-weight: bold;
+}

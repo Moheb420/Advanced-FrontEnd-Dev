@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators,  AbstractControl  } from '@angular/forms';
-import { CommonModule } from '@angular/common';
-import { CreditcardserviceService } from '../creditcardservice.service';
+import { CreditcardserviceService } from '../../creditcardservice.service';
+import { Router } from '@angular/router';
+import { CreditCardDetails } from 'src/app/creditcarddetails.model';
 
 function cardNumberValidator(control: AbstractControl): { [key: string]: boolean } | null {
   const value = control.value;
@@ -40,8 +41,6 @@ function cscCodeValidator(control: AbstractControl): { [key: string]: boolean } 
 
 @Component({
   selector: 'app-creditcardadd',
-  standalone: true,
-  imports: [CommonModule],
   templateUrl: './creditcardadd.component.html',
   styleUrls: ['./creditcardadd.component.css']
 })
@@ -49,7 +48,8 @@ export class CreditcardaddComponent {
   cardForm: FormGroup;
   creditCards: any[] = []; 
 
-  constructor(private fb: FormBuilder, private creditCardService: CreditcardserviceService) {
+  constructor(private fb: FormBuilder,  private router: Router, private creditCardService: CreditcardserviceService) {
+    // Initialize cardForm in the constructor
     this.cardForm = this.fb.group({
       cardNumber: [null, [Validators.required, cardNumberValidator]],
       cardholderName: [null, [Validators.required]],
@@ -68,11 +68,16 @@ export class CreditcardaddComponent {
 
   onSubmit() {
     if (this.cardForm.valid) {
-      // Implement your form submission logic here
-      console.log('Form submitted:', this.cardForm.value);
+      const creditCard = this.cardForm.value as CreditCardDetails;
+      this.creditCardService.addCreditCard(creditCard).subscribe((addedCard) => {
+        this.router.navigateByUrl('/');
+      }, (error) => {
+        console.error('Error adding card:', error);
+      });
     } else {
       // Handle form validation errors
       console.error('Form is invalid.');
     }
-  }
+  } 
+  
 }

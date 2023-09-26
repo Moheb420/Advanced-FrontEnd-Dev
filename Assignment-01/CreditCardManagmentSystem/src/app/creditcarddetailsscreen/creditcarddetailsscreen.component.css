@@ -4,7 +4,7 @@
   width: 100%;
   max-width: 600px; /* Adjust the maximum width as needed */
   margin: 0 auto; /* Center the table horizontally */
-  background-color: #4CAF50; /* Green background color */
+  background-color: #658666; /* Green background color */
 }
 
 /* Style the table header */
@@ -85,3 +85,8 @@ td {
 /* Other styles from the first code block */
 
 /* ... (existing styles) ... */
+
+h2{
+  text-align: center;
+  color: #9fc8a6;
+}

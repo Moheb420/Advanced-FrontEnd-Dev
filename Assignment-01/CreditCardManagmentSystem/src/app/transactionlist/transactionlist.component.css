@@ -1,0 +1,53 @@
+/* Add this to your component's CSS file */
+.transaction-section {
+    background-color: #498456;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: center; /* Center align the h2 */
+  }
+  
+  .transaction-section h2 {
+    font-size: 24px; /* Increase the font size */
+    margin-bottom: 20px; /* Add some spacing below h2 */
+  }
+  
+  .transaction-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .transaction-table th,
+  .transaction-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #90b391;
+  }
+  
+  .transaction-table th {
+    background-color: #327235;
+    color: rgb(185, 219, 173);
+  }
+  
+  .transaction-table tbody tr:nth-child(odd) {
+    background-color: #98d1a2;
+  }
+  
+  .transaction-table tbody tr:hover {
+    background-color: #668775; /* Hover color for rows */
+    cursor: pointer; /* Add pointer cursor on hover */
+  }
+  
+  .validation-error {
+    color: #ff0000;
+    font-size: 12px;
+    font-style: italic;
+  }
+  
+h2{
+    text-align: center;
+    color: #9fc8a6;
+  }

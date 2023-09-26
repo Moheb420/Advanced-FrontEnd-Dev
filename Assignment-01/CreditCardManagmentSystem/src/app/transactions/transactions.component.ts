@@ -13,19 +13,32 @@ export class TransactionsComponent implements OnInit {
 
   cardNumber: number = 0;
   transactions: Transaction[] = [];
+  filteredTransactions: Transaction[] = [];
+  cardNumberFilter: number | undefined;
 
   constructor(
     private http: HttpClient,
     private route: ActivatedRoute,
     private transactionService: TransactionserviceService
-    ) {}
+  ) {}
 
   ngOnInit(): void {
-    this.route.params.subscribe((params) => {
-      this.cardNumber = +params['card_number'];
-      this.transactionService.getTransactionsByCardNumber(this.cardNumber).subscribe((transactions) => {
-        this.transactions = transactions;
-      });
-    });
+    this.transactionService.getAllTransactions().subscribe((data) => {
+      this.transactions = data;
+    }); 
   }
+
+  filterTransactions(): void {
+    if (this.cardNumberFilter !== undefined) {
+      this.transactionService
+        .filterTransactionsByCardNumber(this.cardNumberFilter)
+        .subscribe((filteredTransactions) => {
+          this.transactions = filteredTransactions;
+        });
+    } else {
+      alert("Card number is not valid")
+    }
+  }
+  
+  
 }

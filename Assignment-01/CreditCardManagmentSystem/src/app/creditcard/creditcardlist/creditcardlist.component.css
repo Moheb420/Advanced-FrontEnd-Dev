@@ -1,8 +1,8 @@
 /* Define a class for the table */
 .green-table {
     border-collapse: collapse;
-    width: 100%;
-    max-width: 600px; /* Adjust the maximum width as needed */
+    width: 50%;
+    max-width: 400px; /* Adjust the maximum width as needed */
     margin: 0 auto; /* Center the table horizontally */
     background-color: #4CAF50; /* Green background color */
   }
@@ -21,7 +21,7 @@
   }
   
   .green-table tr:nth-child(odd) {
-    background-color: #4a6b57; /* White background for odd rows */
+    background-color: #c9dbd0; /* White background for odd rows */
   }
   
   /* Style the table data cells */
@@ -40,3 +40,36 @@
     background-color: #45a049; /* Darker green on hover */
   }
   
+
+  .credit-card-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+  }
+  
+  .credit-card-table th,
+  .credit-card-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+    color: #e0e0e0;
+  }
+  
+  .credit-card-table th {
+    background-color: #427844; /* Green background */
+    color: white; /* White text color */
+  }
+  
+  .credit-card-table tr:hover {
+    background-color: #344723; /* Light gray background on hover */
+  }
+  
+  .credit-card-table a {
+    text-decoration: none;
+    color: #4CAF50; /* Green text color for links */
+  }
+  
+h2{
+  text-align: center;
+  color: #9fc8a6;
+}

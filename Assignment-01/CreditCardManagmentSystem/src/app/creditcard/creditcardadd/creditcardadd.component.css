@@ -1,0 +1,63 @@
+ 
+  /* Style for the form elements */
+  .form-group {
+    margin-bottom: 20px; /* Spacing between form groups */
+    margin-left: 20px; /* Adjust the left margin for distance from the left side */
+
+  }
+  
+  /* Style for labels */
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px; /* Spacing below labels */
+  }
+  
+  /* Style for input fields */
+  .form-control {
+    width: 250px; /* Fixed width in pixels */
+    height: 15px; /* Fixed height in pixels */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    transition: border-color 0.2s ease; /* Smooth border transition */
+  }
+  
+  
+  /* Style for error messages */
+  .error-message {
+    color: #ad3d0c; /* Red text color for errors */
+    margin-top: 4px; /* Spacing above error messages */
+  }
+  
+  /* Style for the Submit button */
+  .btn-primary {
+    background-color: #007bff; /* Professional blue background color */
+    color: white; /* White text color */
+    padding: 12px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.2s ease; /* Smooth background transition */
+    margin-left: 190px;
+  }
+  
+  /* Hover effect for the Submit button */
+  .btn-primary:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+
+  h1 {
+    color: rgb(192, 216, 192);
+    font-weight: 200px;
+    padding-left: 20px;
+  }
+  
+h2{
+  text-align: center;
+  color: #9fc8a6;
+}
+
+label{
+  color: rgb(146, 212, 146);
+}
