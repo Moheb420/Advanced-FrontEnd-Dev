@@ -1,4 +1,3 @@
-/* Define a class for the table */
 .green-table {
   border-collapse: collapse;
   width: 100%;
@@ -81,10 +80,6 @@ td {
   color: #fff;
   border-bottom: solid 1px rgba(255, 255, 255, 0.1);
 }
-
-/* Other styles from the first code block */
-
-/* ... (existing styles) ... */
 
 h2{
   text-align: center;

@@ -13,14 +13,12 @@
       </tr>
     </thead>
     <tbody>
-      <!-- Add ngFor loop for Credit Card details here -->
       <tr *ngFor="let card of CreditCarddetails">
         <td>{{ card.cardholder_name }}</td>
         <td>{{ card.card_number }}</td>
         <td>{{ card.csc_code }}</td>
         <td>{{ card.expiration_date_month }}/{{ card.expiration_date_year }}</td>
         <td>
-          <!-- Add actions for Credit Card details here -->
           <button (click)="removeCreditCard()" class="remove-button">Remove Credit Card</button>
         </td>
       </tr>

@@ -1,4 +1,3 @@
-// creditcardservice.service.ts
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { CreditCardDetails } from './creditcarddetails.model';
@@ -37,7 +36,7 @@ export class CreditcardserviceService {
 
     return this.http.delete(removeUrl).pipe(
       map(() => true), // Assuming a successful deletion
-      catchError(() => of(false)) // Handle errors
+      catchError(() => of(false)) 
     );
   }
 

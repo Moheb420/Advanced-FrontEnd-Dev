@@ -5,8 +5,8 @@ import { CommonModule } from '@angular/common';
 
 
 @NgModule({
-  declarations: [CreditcardaddComponent], // Declare your component here
+  declarations: [CreditcardaddComponent], 
   imports: [CommonModule, ReactiveFormsModule],
-  exports: [CreditcardaddComponent], // Export your component
+  exports: [CreditcardaddComponent], 
 })
 export class CreditcardModule { }

@@ -1,47 +1,48 @@
-/* Add Transaction Form Styles */
 .transaction-form {
-    background-color: #71a47e; /* Light green background color */
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .form-group {
-    margin-bottom: 20px;
-  }
-  
-  label {
-    font-weight: bold;
-    color: #007d46; /* Green label text color */
-  }
-  
-  .form-control {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #4e8c52;
-    border-radius: 3px;
-  }
-  
-  .validation-error {
-    color: #ff0000; /* Red error text color */
-    font-size: 14px;
-  }
-  
-  .submit-button {
-    background-color: #007d46; /* Green button background color */
-    color: #d5eddb; /* White button text color */
-    border: none;
-    border-radius: 3px;
-    padding: 10px 20px;
-    cursor: pointer;
-  }
-  
-  .submit-button:hover {
-    background-color: #005c33; /* Darker green on hover */
-  }
-  
-h2{
-    text-align: center;
-    color: #9fc8a6;
-  }
+  background-color: #71a47e; /* Light green background color */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: inline-block; /* Display as inline-block to contain form elements */
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+  color: #007d46; /* Green label text color */
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #4e8c52;
+  border-radius: 3px;
+}
+
+.validation-error {
+  color: #ff0000; /* Red error text color */
+  font-size: 14px;
+}
+
+.submit-button {
+  background-color: #007d46; /* Green button background color */
+  color: #d5eddb; /* White button text color */
+  border: none;
+  border-radius: 3px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #005c33; /* Darker green on hover */
+}
+
+h2 {
+  text-align: left;
+  color: #9fc8a6;
+  margin-left: 65px;
+}

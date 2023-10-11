@@ -30,14 +30,13 @@ export class TransactionlistComponent implements OnInit {
   ngOnInit(): void {
     this.route.params.subscribe((params) => {
       this.cardNumber = params['card_number'].toString();
+      console.log(this.cardNumber)
       this.transactionserviceService.getTransactionsByCardNumber(parseInt(this.cardNumber)).subscribe((transactions) => {
         this.transactions = transactions;
-        console.log(transactions);
       });
     });
   }
 
-  // Custom validator function for checking if a value is a valid number
   validateNumber(control: any) {
     const value = control.value;
     if (value === null || value === undefined || isNaN(value)) {

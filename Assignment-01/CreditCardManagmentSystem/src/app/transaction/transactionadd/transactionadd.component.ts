@@ -19,13 +19,12 @@ export class TransactionaddComponent {
     this.transactionForm = this.fb.group({
       credit_card: [null, Validators.required],
       amount: [null, [Validators.required, Validators.pattern(/^\d+(\.\d{1,2})?$/)]],
-      currency: [null, Validators.required],
       comment: [''],
       date: [this.currentDate, Validators.required],
+      currency: [null, Validators.required],
     });
   }
 
-  // Add a transaction
   addNewTransaction(): void {
     if (this.transactionForm.valid) {
       const newTransaction: Transaction = this.transactionForm.value;
@@ -37,11 +36,5 @@ export class TransactionaddComponent {
     {
       console.log("false")
     }
-  }
-  
-  // Function to generate a unique UID
-  getCreditCards(): string[] {
-    return ['Card 1', 'Card 2', 'Card 3'];
-  }
-  
+  }  
 }

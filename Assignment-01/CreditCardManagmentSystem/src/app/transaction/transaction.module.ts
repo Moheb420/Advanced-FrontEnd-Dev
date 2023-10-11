@@ -4,16 +4,14 @@ import { TransactionoverviewComponent } from './transactionoverview/transactiono
 import { ReactiveFormsModule } from '@angular/forms';
 import { TransactionlistComponent } from '../transactionlist/transactionlist.component';
 import { TransactionaddComponent } from './transactionadd/transactionadd.component';
-
+import { FormsModule } from '@angular/forms'; 
 
 
 @NgModule({
   declarations: [
-    TransactionoverviewComponent,
-    TransactionlistComponent,
-    TransactionaddComponent
+    TransactionlistComponent
   ],
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule, FormsModule],
   exports: [TransactionlistComponent], // Export your component
 })
 export class TransactionModule { }

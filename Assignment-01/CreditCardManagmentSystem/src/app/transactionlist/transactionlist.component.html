@@ -9,35 +9,30 @@
         <th>Amount</th>
         <th>Date</th>
         <th>Currency</th>
-        <th>Comment</th>
         <th>Actions</th>
       </tr>
     </thead>
     <tbody>
-      <!-- Add ngFor loop for Transaction List here -->
       <tr *ngFor="let transaction of transactions">
         <td>{{ transaction.uid }}</td>
         <td>{{ transaction.credit_card.card_number }}</td>
         <td>
-          <!-- Amount with validation -->
-          <span [ngClass]="{'validation-error': transactionForm.get('amount')?.hasError('required') || transactionForm.get('amount')?.hasError('notANumber')}">
+          <ng-container *ngIf="transaction.amount; else showAmount">
             {{ transaction.amount }}
-          </span>
-          <div *ngIf="transactionForm.get('amount')?.hasError('required') || transactionForm.get('amount')?.hasError('notANumber')" class="validation-error">
+          </ng-container>
+          <ng-template #showAmount>
             Amount is required and must be a number.
-          </div>
+          </ng-template>
         </td>
         <td>{{ transaction.date | date: 'medium' }}</td>
         <td>
-          <!-- Currency with validation -->
-          <span [ngClass]="{'validation-error': transactionForm.get('currency')?.hasError('required')}">
+          <ng-container *ngIf="transaction.currency; else showCurrency">
             {{ transaction.currency }}
-          </span>
-          <div *ngIf="transactionForm.get('currency')?.hasError('required')" class="validation-error">
+          </ng-container>
+          <ng-template #showCurrency>
             Currency is required.
-          </div>
+          </ng-template>
         </td>
-        <td>{{ transaction.comment }}</td>
         <td>
           <button (click)="removeTransaction(transaction)">Remove</button>
         </td>
