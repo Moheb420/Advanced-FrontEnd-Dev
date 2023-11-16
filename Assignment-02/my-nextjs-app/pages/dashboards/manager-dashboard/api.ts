@@ -27,3 +27,5 @@ export const createTrainer = async (newTrainer: Data) => {
     throw error;
   }
 };
+
+export default createTrainer;
