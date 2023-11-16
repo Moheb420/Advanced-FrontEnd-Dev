@@ -1,5 +1,6 @@
 // pages/index.tsx
 import { useEffect, useState } from 'react';
+import LoginPage from './login';
 
 const HomePage: React.FC = () => {
   const [apiData, setApiData] = useState<string>('');
@@ -20,8 +21,7 @@ const HomePage: React.FC = () => {
 
   return (
     <div>
-      <h1>Hello Next.js</h1>
-      <p>Data from server: {apiData}</p>
+      <LoginPage />
     </div>
   );
 };

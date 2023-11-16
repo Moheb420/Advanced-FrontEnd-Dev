@@ -22,6 +22,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "../../Assignment-01/page.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "../../Assignment-01/page.tsx", "../../Assignment-01/CreditCardManagmentSystem/index.tsx", "../../Assignment-01/CreditCardManagmentSystem/manager-dashboard.tsx"],
   "exclude": ["node_modules"]
 }
