@@ -1,6 +1,6 @@
 // components/ClientList.tsx
 import React, { useEffect, useState } from 'react';
-import { Client } from '../data';
+import Client  from '../client';
 
 
 const ClientList: React.FC = () => {

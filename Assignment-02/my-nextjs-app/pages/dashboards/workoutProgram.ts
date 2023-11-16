@@ -1,4 +1,4 @@
-import Exercise from "./Exercise";
+import Exercise from "./exercise";
 export default interface WorkoutProgram {
     workoutProgramId: number;
     name: string;
