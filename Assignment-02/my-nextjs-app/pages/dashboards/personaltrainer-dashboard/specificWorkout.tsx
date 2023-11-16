@@ -1,7 +1,8 @@
 // components/SpecificWorkout.tsx
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
-import { WorkoutProgram, Exercise } from '../data';
+import Exercise from '../Exercise';
+import WorkoutProgram from '../workoutProgram';
 
 const SpecificWorkout: React.FC = () => {
   const router = useRouter();

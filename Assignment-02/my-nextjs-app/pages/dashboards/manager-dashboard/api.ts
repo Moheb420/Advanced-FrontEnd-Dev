@@ -1,4 +1,4 @@
-import { Data } from "../data";
+import Data  from "../data";
 
 // api.ts
 const API_BASE_URL = 'https://afefitness2023.azurewebsites.net/api/Users';

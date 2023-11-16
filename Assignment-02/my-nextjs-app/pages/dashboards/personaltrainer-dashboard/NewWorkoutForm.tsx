@@ -1,7 +1,7 @@
 // NewWorkoutForm.tsx
 import React, { useState } from 'react';
-import { WorkoutProgram, Exercise } from '../data'; // Import the necessary interfaces
-
+import Exercise from '../Exercise';
+import WorkoutProgram from '../workoutProgram';
 const NewWorkoutForm: React.FC = () => {
   const [workoutData, setWorkoutData] = useState<WorkoutProgram>({
     workoutProgramId: 0,

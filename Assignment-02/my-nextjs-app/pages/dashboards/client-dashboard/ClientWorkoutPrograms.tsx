@@ -1,7 +1,7 @@
 // components/ClientWorkoutPrograms.tsx
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
-import { WorkoutProgram } from '../data';
+import WorkoutProgram from '../workoutProgram';
 import * as jwtDecode from 'jwt-decode';
 
 const ClientWorkoutPrograms: React.FC = () => {
@@ -107,3 +107,4 @@ const ClientWorkoutPrograms: React.FC = () => {
 };
 
 export default ClientWorkoutPrograms;
+

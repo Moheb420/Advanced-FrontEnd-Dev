@@ -1,6 +1,6 @@
   // TrainerForm.tsx
   import React, { useState } from 'react';
-  import { Data } from '../data';
+  import  Data  from '../data';
   
   const TrainerForm: React.FC = () => {
     const [formData, setFormData] = useState<Data>({

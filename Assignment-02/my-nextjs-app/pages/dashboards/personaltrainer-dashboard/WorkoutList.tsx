@@ -1,6 +1,6 @@
 // components/WorkoutList.tsx
 import React, { useEffect, useState } from 'react';
-import { WorkoutProgram } from '../data';
+import WorkoutProgram from '../workoutProgram';
 
 const WorkoutList: React.FC = () => {
   const [workoutPrograms, setWorkoutPrograms] = useState<WorkoutProgram[]>([]);
