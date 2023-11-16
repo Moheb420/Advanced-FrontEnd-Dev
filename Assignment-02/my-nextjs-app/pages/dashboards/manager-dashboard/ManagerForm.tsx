@@ -1,6 +1,6 @@
 // TrainerForm.tsx
 import React, { useState } from 'react';
-import Data  from '../data'; 
+// import Data  from '../data'; 
 
 const ManagerForm: React.FC = () => {
   const [formData, setFormData] = useState<Data>({
@@ -80,3 +80,12 @@ const ManagerForm: React.FC = () => {
 };
 
 export default ManagerForm;
+interface Data {
+  userId: number;
+  firstName: string;
+  lastName: string;
+  email: string;
+  password: string;
+  personalTrainerId: number; 
+  accountType: string; 
+}

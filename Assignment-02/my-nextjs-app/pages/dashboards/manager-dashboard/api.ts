@@ -1,4 +1,4 @@
-import Data  from "../data";
+// import Data  from "../data";
 
 // api.ts
 const API_BASE_URL = 'https://afefitness2023.azurewebsites.net/api/Users';
@@ -29,3 +29,13 @@ export const createTrainer = async (newTrainer: Data) => {
 };
 
 export default createTrainer;
+
+interface Data {
+  userId: number;
+  firstName: string;
+  lastName: string;
+  email: string;
+  password: string;
+  personalTrainerId: number; 
+  accountType: string; 
+}

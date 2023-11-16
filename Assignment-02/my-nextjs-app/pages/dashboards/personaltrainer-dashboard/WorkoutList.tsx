@@ -1,6 +1,6 @@
 // components/WorkoutList.tsx
 import React, { useEffect, useState } from 'react';
-import WorkoutProgram from '../workoutProgram';
+// import WorkoutProgram from '../workoutProgram';
 
 const WorkoutList: React.FC = () => {
   const [workoutPrograms, setWorkoutPrograms] = useState<WorkoutProgram[]>([]);
@@ -64,3 +64,24 @@ const WorkoutList: React.FC = () => {
 };
 
 export default WorkoutList;
+
+// import Exercise from "./exercise";
+ interface WorkoutProgram {
+  workoutProgramId: number;
+  name: string;
+  description: string;
+  exercises: Exercise[];
+  personalTrainerId: number;
+  clientId: number;
+}
+
+interface Exercise {
+  exerciseId: number;
+  name: string;
+  description: string;
+  sets: number;
+  repetitions: number;
+  time: string;
+  workoutProgramId: number;
+  personalTrainerId: number;
+}

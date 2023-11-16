@@ -1,6 +1,5 @@
 // components/ClientList.tsx
 import React, { useEffect, useState } from 'react';
-import Client  from '../client';
 
 
 const ClientList: React.FC = () => {
@@ -44,3 +43,11 @@ const ClientList: React.FC = () => {
 };
 
 export default ClientList;
+
+
+interface Client {
+  clientId: number;
+  firstName: string;
+  lastName: string;
+  email: string;
+}

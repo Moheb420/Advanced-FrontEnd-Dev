@@ -1,9 +1,27 @@
 // components/SpecificWorkout.tsx
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
-import Exercise from '../exercise';
-import WorkoutProgram from '../workoutProgram';
+// import Exercise from '../exercise';
+// import WorkoutProgram from '../workoutProgram';
+interface WorkoutProgram {
+  workoutProgramId: number;
+  name: string;
+  description: string;
+  exercises: Exercise[];
+  personalTrainerId: number;
+  clientId: number;
+}
 
+interface Exercise {
+  exerciseId: number;
+  name: string;
+  description: string;
+  sets: number;
+  repetitions: number;
+  time: string;
+  workoutProgramId: number;
+  personalTrainerId: number;
+}
 const SpecificWorkout: React.FC = () => {
   const router = useRouter();
   const [idInput, setIdInput] = useState<string>('');
